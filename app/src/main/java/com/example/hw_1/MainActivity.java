@@ -43,14 +43,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void launchNextActivity(View v) {
-        client.addHeader("Accept", "*/*");
-        client.get(api_url, new AsyncHttpResponseHandler() {
+        client.addHeader("Accept", "*/*"); // HTTP Header for request
+        client.get(api_url, new AsyncHttpResponseHandler() { // HTTP get request to retrieve info via API call
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
-                Log.d("api response", new String(responseBody));
+                Log.d("api response", new String(responseBody)); // Show what API call looks like
 
                 try {
-                    JSONObject json = new JSONObject(new String(responseBody));
+                    JSONObject json = new JSONObject(new String(responseBody)); // Convert string from API call into JSON
                     Intent intent = new Intent(MainActivity.this, SecondActivity.class); // create intent - specify to and from
                     intent.putExtra("title", json.getString("title")); // Put title in intent for display in second activity
                     intent.putExtra("blanks", json.getString("blanks")); // Make JSON array of word types into string to put in intent

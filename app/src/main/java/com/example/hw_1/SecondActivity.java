@@ -16,7 +16,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -27,8 +26,6 @@ public class SecondActivity extends AppCompatActivity {
     private Button button_createStory;
     private String template_story;
     private String blankField;
-    private int jsonArrayLength;
-    private String testgettinginput;
     private ArrayList<String> userInputList;
 
     @Override
