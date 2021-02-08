@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HW-1</string>
+    <string name="madLibs_welcome">Welcome to Madlibs</string>
+    <string name="button_start">Get Started</string>
+    <string name="button_story">Generate</string>
+    <string name="home_button">Go Home</string>
+</resources>
